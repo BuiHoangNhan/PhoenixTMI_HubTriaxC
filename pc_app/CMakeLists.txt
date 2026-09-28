@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.16)
+project(HubNodeManager LANGUAGES CXX)
+
+if(NOT WIN32)
+    message(FATAL_ERROR "This small serial client currently targets Windows.")
+endif()
+
+add_executable(hub_node_manager WIN32 hub_node_manager.cpp)
+target_compile_features(hub_node_manager PRIVATE cxx_std_17)
+target_compile_definitions(hub_node_manager PRIVATE UNICODE _UNICODE)
+target_link_libraries(hub_node_manager PRIVATE comctl32)
+if(MSVC)
+    target_compile_options(hub_node_manager PRIVATE /W4 /permissive-)
+else()
+    target_compile_options(hub_node_manager PRIVATE -Wall -Wextra -Wpedantic)
+endif()

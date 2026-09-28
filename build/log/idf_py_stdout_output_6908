@@ -1,0 +1,45 @@
+Command: C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe D:\.espressif\v6.0.2\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Hoang Vinh\Working\2026\4. FirmwareChoBomDoiBangC(Triax)\PhoenixTMI_HubTriaxFirmwareC_2026\build\HubTriaxDemo.elf D:\Hoang Vinh\Working\2026\4. FirmwareChoBomDoiBangC(Triax)\PhoenixTMI_HubTriaxFirmwareC_2026\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe' 'D:\.espressif\v6.0.2\esp-idf\tools\idf.py' '-p' 'COM5'
+_RESET),boot:0x13 (SPI_Fce...
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi daets Jun  8 2016 00:22:57[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 28 2026 11:51:23[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.0[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=13534h ( 79156) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=0002355c vaddr=3ffb0000 size=0402ch ( 16428) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00027590 vaddr=40080000 size=08a88h ( 35464) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84370h (541552) map[0m
+[0;32mI (328) esp_image: segment 4: paddr=000b4398 vaddr=40088a88 size=0d740h ( 55104) load[0m
+[0;32mI (351) esp_image: segment 5: paddr=000c1ae0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (363) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (363) boot: Disabling RNG early entropy source...[0m
+READY hub ESP-NOW channel=1 uart=0 baud=115200
+Hub ESP-NOW demo commands (UART 115200, newline):
+  add AA:BB:CC:DD:EE:FF   add/save a pump node (max 6)
+  del AA:BB:CC:DD:EE:FF   remove/save a node
+  list                   show configured nodes and hub MAC
+  poll AA:BB:CC:DD:EE:FF  request one telemetry sample
+  poll all               request one sample from each node in order
+  help
+Output: one JSON line per response/error, suitable for a PC parser.

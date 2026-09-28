@@ -1,0 +1,7 @@
+"-specs=D:/Hoang Vinh/Working/2026/4. FirmwareChoBomDoiBangC(Triax)/PhoenixTMI_HubTriaxFirmwareC_2026/build/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-fno-rtti
